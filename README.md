@@ -7,14 +7,12 @@ This percentage calculator is easy to use, lightweight, and fully responsive, en
 
 ## Features
 - **Calculate percentage:** Find percentage values for given numbers.
-- **Add or subtract percentages:** Calculate percentage increases or decreases.
 - **User-friendly interface:** Simple, intuitive design for ease of use.
 - **Instant results:** Get results instantly without page reloads.
-- **Responsive design:** Fully functional on mobile and desktop devices.
 - **No dependencies:** Pure **JavaScript**, **HTML**, and **CSS**—no external libraries needed.
 
 ## Demo
-You can try the live demo of the calculator [here](https://your-username.github.io/your-repository-name/).
+You can try the live demo of the calculator [here](https://sajida-dev.github.io/Percentage-Calculator).
 
 ## Installation
 
