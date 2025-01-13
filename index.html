@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_1</title>
+    <style>
+        body{
+            padding: 5% 19.75% 0% 19.75%;
+            background-color: rgba(247, 242, 221, 0.904);
+            height: 200px;
+        }
+        .resulted{
+            width: 400px;
+            height: 470px;
+        }
+        #result_section{
+            float: left;
+            background-color: white;
+            color: #C49B66;
+        }
+        #input_section{
+            float: right;
+            color: white;
+            background-color: burlywood;
+        }
+        #input_section>h1{
+            text-align: center;
+        }
+        input{
+            padding: 3%;
+            width: 85%;
+            background: none;
+            border-radius: 30px;
+            border: 2px solid white;
+            outline: none;
+            margin: 7px 15px;
+            color: white;
+        }
+        label{
+            margin: 7px 35px;
+        }
+        ::placeholder{
+            color: white;
+        }
+        #button{
+            padding: 3% 3.5%;
+            border: #C49B66 solid 2px;
+            border-radius: 20px;
+            background-color: white;
+            color: #C49B66;
+            margin-left: 55%;
+            margin-top: 10px;
+        }
+        #result_section>h3,#result_section>h1{
+            width: 300px;
+            margin: 40px 70px 5px 50px;
+            text-align: center;
+        }
+        #percentage_calculator{
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div id="percentage_calculator">
+        <div id="result_section" class="resulted">
+            <h1>Your percentage:</h1>
+            <h3 id="result"></h3>
+        </div>
+        <div id="input_section" class="resulted">
+            <h1>Percentage Calculater </h1>
+            <form>
+                <label>Enter your obtained Marks out of 100 : </label>
+                <input id="english" type="text" placeholder="English Marks">
+                <label>Enter your obtained Marks out of 100 : </label>
+                <input id="math" type="text" placeholder="Math Marks">
+                <label>Enter your obtained Marks out of 100 : </label>
+                <input id="computer" type="text" placeholder="Computer Marks">
+                <label>Enter your obtained Marks out of 100 : </label>
+                <input id="urdu" type="text" placeholder="Urdu Marks">
+            </form>
+            <button id="button" onclick="calculatePercentage()" >Calculate Percentage</button>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <script>
+        function calculatePercentage()
+        {
+            var englishMarks,mathMarks,computerMarks,urduMarks;
+            englishMarks = Number(document.getElementById('english').value);
+            mathMarks = Number(document.getElementById('math').value);
+            computerMarks = Number(document.getElementById('computer').value);
+            urduMarks = Number(document.getElementById('urdu').value);
+            var percentage,sum,totalMarks;
+            sum = englishMarks+mathMarks+computerMarks+urduMarks;
+            percentage = (sum*100)/400;
+            if(percentage>90)
+            {
+                document.getElementById('result').innerHTML = "Congratulations! You get A+ grades with " + percentage + " percentage.";
+            }
+            else if(percentage>80 && percentage<90)
+            {
+                document.getElementById('result').innerHTML = "Congratulations! You get A grade with " + percentage + " percentage.";
+            }
+            else if(percentage > 70 && percentage < 80)
+            {
+                document.getElementById('result').innerHTML = "Good! you get B grade with " + percentage + " percentage.";
+            }
+            else if(percentage > 60 && percentage < 70)
+            {
+                document.getElementById('result').innerHTML = "Work hard for good percentage, you get C grade with " + percentage + " percentage.";
+            }
+            else if(percentage>50 && percentage < 60){
+                document.getElementById('result').innerHTML = "Need Work hard! You Pass with D grade with " + percentage + " percentage.";
+            }
+            else{
+                document.getElementById('result').innerHTML = "You fail with " + percentage + " percentage. Try again to improve your marks.";
+            }
+            
+        }
+    </script>
+</body>
+</html>
