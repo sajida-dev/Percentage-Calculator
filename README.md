@@ -12,6 +12,7 @@ This percentage calculator is easy to use, lightweight, and fully responsive, en
 - **No dependencies:** Pure **JavaScript**, **HTML**, and **CSS**—no external libraries needed.
 
 ## Demo
+![Demo Image](https://github.com/sajida-dev/Percentage-Calculator/raw/main/demo.png)
 You can try the live demo of the calculator [here](https://sajida-dev.github.io/Percentage-Calculator).
 
 ## Installation
